@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimUDuck.Model;
+using System;
 
 namespace SimUDuck
 {
@@ -6,7 +7,13 @@ namespace SimUDuck
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Duck mallardDuck = new MallardDuck();
+            Duck readheadduck = new ReadheadDuck();
+
+            mallardDuck.Display();
+            readheadduck.Display();
+
+            Console.ReadKey();
         }
     }
 }

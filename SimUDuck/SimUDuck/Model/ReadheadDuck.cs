@@ -6,7 +6,7 @@ namespace SimUDuck.Model
     {
         public override void Display()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("I'm a readhead quak!!");
         }
     }
 }

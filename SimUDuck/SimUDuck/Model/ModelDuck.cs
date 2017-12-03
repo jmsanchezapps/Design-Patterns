@@ -3,18 +3,17 @@ using System;
 
 namespace SimUDuck.Model
 {
-    //No Quack, Squeak. No fly
-    public class RubberDuck : Duck
+    class ModelDuck : Duck
     {
-        public RubberDuck()
+        public ModelDuck()
         {
-            QuackBehavior = new Squeak();
+            QuackBehavior = new Quack();
             FlyBehavior = new FlyNoWay();
         }
 
         public override void Display()
         {
-            Console.WriteLine("I'm a rubber duck!!");
+            Console.WriteLine("I'm a model duck!!");
         }
     }
 }

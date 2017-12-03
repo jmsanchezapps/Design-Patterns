@@ -1,12 +1,17 @@
-﻿using System;
+﻿using SimUDuck.Model.Behaviors;
+using System;
 
 namespace SimUDuck.Model
 {
     public abstract class Duck
     {
-        public void Quack()
+        public IQuackBehavior QuackBehavior { get;  set; }
+
+        public IFlyBehavior FlyBehavior { get; set; }
+
+        public void PerformQuack()
         {
-            Console.WriteLine("Quackk!!");
+            QuackBehavior.Quack();
         }
 
         public void Swim()
@@ -14,9 +19,9 @@ namespace SimUDuck.Model
             Console.WriteLine("I'm swimming!!");
         }
 
-        public void Fly()
+        public void PerformFly()
         {
-            Console.WriteLine("I'm flying!!");
+            FlyBehavior.Fly();
         }
 
         public abstract void Display();

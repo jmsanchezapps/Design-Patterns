@@ -1,4 +1,5 @@
 ﻿using SimUDuck.Model;
+using SimUDuck.Model.Behaviors;
 using System;
 
 namespace SimUDuck
@@ -11,22 +12,28 @@ namespace SimUDuck
             Duck readheadduck = new ReadheadDuck();
             Duck rubberDuck = new RubberDuck();
             Duck decoyDuck = new DecoyDuck();
+            Duck modelDuck = new ModelDuck();
 
             mallardDuck.Display();
-            mallardDuck.Quack();
-            mallardDuck.Fly();
+            mallardDuck.PerformQuack();
+            mallardDuck.PerformFly();
 
             readheadduck.Display();
-            readheadduck.Quack();
-            readheadduck.Fly();
+            readheadduck.PerformQuack();
+            readheadduck.PerformFly();
 
             rubberDuck.Display();
-            rubberDuck.Quack();
-            rubberDuck.Fly();
+            rubberDuck.PerformQuack();
+            rubberDuck.PerformFly();
 
             decoyDuck.Display();
-            decoyDuck.Quack();
-            decoyDuck.Fly();
+            decoyDuck.PerformQuack();
+            decoyDuck.PerformFly();
+
+            modelDuck.Display();
+            modelDuck.PerformFly();
+            modelDuck.FlyBehavior = new FlyRocketPowered();
+            modelDuck.PerformFly();
 
             Console.ReadKey();
         }

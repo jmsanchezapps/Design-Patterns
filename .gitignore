@@ -1,0 +1,8 @@
+# Compiled source #
+###################
+*.dll
+*.exe
+
+.vs/
+bin/
+obj/
